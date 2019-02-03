@@ -1,7 +1,10 @@
 '''
 @author: grekz
 '''
+
+
 class E235_LowestCommonAncestorofaBinarySearchTree:
+
     def lowestCommonAncestor(self, root, p, q):
         """
         :type root: TreeNode
@@ -9,6 +12,8 @@ class E235_LowestCommonAncestorofaBinarySearchTree:
         :type q: TreeNode
         :rtype: TreeNode
         """
-        if root.val < p.val and root.val < q.val : return self.lowestCommonAncestor(root.right, p, q)
-        elif root.val > p.val and root.val > q.val : return self.lowestCommonAncestor(root.left, p, q)
+        if p.val > root.val < q.val:
+            return self.lowestCommonAncestor(root.right, p, q)
+        if p.val < root.val > q.val:
+            return self.lowestCommonAncestor(root.left, p, q)
         return root

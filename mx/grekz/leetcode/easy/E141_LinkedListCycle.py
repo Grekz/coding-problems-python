@@ -1,9 +1,6 @@
 '''
-Created on Feb 15, 2018
-
 @author: grekz
 '''
-
 class E141_LinkedListCycle:
     def hasCycle(self, head):
         """
@@ -16,3 +13,4 @@ class E141_LinkedListCycle:
             fast = fast.next.next
             if (slow == fast) : return True
         return False
+        

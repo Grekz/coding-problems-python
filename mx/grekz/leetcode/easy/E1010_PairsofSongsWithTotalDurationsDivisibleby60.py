@@ -1,7 +1,7 @@
 '''
 @author: grekz
 '''
-class E1013_PairsofSongsWithTotalDurationsDivisibleby60:
+class E1010_PairsofSongsWithTotalDurationsDivisibleby60:
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
         res, cnt = 0, [0] * 60
         for x in time :
